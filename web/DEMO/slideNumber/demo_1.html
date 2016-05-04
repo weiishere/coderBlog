@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>MVC——模拟类库</title>
+</head>
+<body>
+
+</body>
+    <script src="../Javascript/jquery-1.8.2.min.js"></script>
+    <script>
+        var Class = function (parent) {
+            var klass = function () {
+                this.init.apply(this, arguments);
+            }
+            //加入继承支持
+            if (parent) {
+                var superClass = function () { }
+                superClass.prototype = parent.prototype;
+                klass.prototype = new superClass;
+            }
+            klass.prototype.init = function () { };
+            //定义prototype的别名
+            klass.fn = klass.prototype;
+            //定义类的别名
+            klass.fn.parent = klass;
+            //给类添加属性
+            klass.extend = function (obj) {
+                for (var i in obj) {
+                    klass[i] = obj[i];
+                }
+                //回调函数
+                var extended = obj.extended;
+                if (extended) extended(klass);
+            };
+            //给实例添加属性
+            klass.include = function (obj) {
+                var included = obj.included;
+                for (var i in obj) {
+                    klass.fn[i] = obj[i];
+                }
+                if (included) included(klass);
+            };
+            return klass;
+        };
+
+        var Person = new Class();//当使用new关键字来调用构造函数时，执行上下文从全局变量对象(window)变成一个空的上下文，这个上下文代表了新生成的实例
+        
+        //初始化回调函数
+        Person.extend({
+            extended: function (klass) { /*callback*/ }
+        });
+        Person.extend({
+            find: function (id) { /**/ },
+            exists: function (id) {/**/ }
+        });
+        var person = Person.find(1);
+        alert(Person.exists);
+    </script>
+</html>

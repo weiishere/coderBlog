@@ -1,0 +1,7 @@
+﻿.mainTable ,.mainList,.listItemTable{ width:100%}
+    .mainTable th { width: 75px; text-align:left}
+    .mainTable td {height:50px }
+    .mainList td { text-align:center}
+    .mainList th{height:50px;text-align:center}
+    .listItemTable td { height:20px;font-weight:normal;font-size:12px;text-align:center}
+.mainListOut:first-child { width:100%;overflow:auto;}

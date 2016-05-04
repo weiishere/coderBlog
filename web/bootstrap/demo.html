@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <title></title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span2" style="background: #ccc; height: 100%">
+                ddddddd
+                <!--Sidebar content-->
+            </div>
+            <div class="span10" style="background: #999; height: 100%">
+                fff
+                <!--Body content-->
+
+            </div>
+        </div>
+    </div>
+    <div class="dropdown">
+        <a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">Dropdown<b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            <li><a tabindex="-1" href="#">行为</a></li>
+            <li><a tabindex="-1" href="#">其他行为</a></li>
+            <li><a tabindex="-1" href="#">特别行为</a></li>
+            <li class="divider"></li>
+            <li><a tabindex="-1" href="#">分割链接</a></li>
+        </ul>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $('.dropdown-toggle').dropdown();
+    </script>
+</body>
+</html>

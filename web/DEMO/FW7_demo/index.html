@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS, iOS Theme -->
+    <link href="../../Framework7-1.2.0/dist/css/framework7.ios.min.css" rel="stylesheet" />
+    <!-- Path to Framework7 color related styles, iOS Theme -->
+    <link href="../../Framework7-1.2.0/dist/css/framework7.ios.colors.min.css" rel="stylesheet" />
+    <!-- Path to your custom app styles-->
+    <link href="../../Framework7-1.2.0/dist/css/my-app.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="views">
+        <!-- View -->
+        <div class="view view-main">
+            <!-- Navbar -->
+            <div class="navbar">
+                <!-- Home page navbar -->
+                <div class="navbar-inner" data-page="index">
+                    <div class="center sliding">Home</div>
+                </div>
+
+                <!-- About page navbar -->
+                <div class="navbar-inner cached" data-page="about">
+                    <div class="left sliding">
+                        <a href="#" class="link icon-only back">
+                            <i class="icon icon-back"></i>
+                        </a>
+                    </div>
+                    <div class="center sliding">
+                        About
+                    </div>
+                </div>
+
+                <!-- Services page navbar -->
+                <div class="navbar-inner cached" data-page="services">
+                    <div class="center">Services</div>
+                </div>
+            </div>
+
+            <!-- Pages -->
+            <div class="pages navbar-through">
+                <!-- Home page -->
+                <div class="page" data-page="index">
+                    <div class="page-content">
+                        <p>Home page</p>
+                        <a href="#about">ABOUT</a>
+                    </div>
+                </div>
+
+                <!-- About page -->
+                <div class="page cached" data-page="about">
+                    
+                    <div class="page-content">
+                        <p>About page</p>
+                        <a href="#services">HOME</a>
+                    </div>
+                </div>
+
+                <!-- Services page -->
+                <div class="page cached" data-page="services">
+                    <div class="page-content">
+                        <a href="#" class="back"> Go back to home page </a>
+                        <p>Services page</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<!-- Path to Framework7 Library JS-->
+<script src="../../Framework7-1.2.0/dist/js/framework7.min.js"></script>
+<!-- Path to your app js-->
+<script>
+    // Initialize App
+    var myApp = new Framework7();
+    var mainView = myApp.addView('.view-main', {
+        domCache: true, //enable inline pages
+        dynamicNavbar: true
+    });
+    // Initialize View
+    //var mainView = myApp.addView('.view-main');
+
+    // Load about page:
+    //mainView.router.load({ pageName: 'about' });
+</script>

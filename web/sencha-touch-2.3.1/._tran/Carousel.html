@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Carousel</title>
+    <link href="../resources/css/sencha-touch.css" rel="stylesheet" />
+    <script src="../sencha-touch-debug.js"></script>
+    <script>
+        Ext.require("Ext.Panel");
+        Ext.require("Ext.Carousel");
+        Ext.application({
+            icon: '168.png',
+            glossOnIcon: false,
+            tabletStartupScreen: '168.png',
+            phoneStartupScreen: '168.png',
+            launch: function () {
+                //var carousel1 = Ext.create("Ext.Carousel", {
+                //    ui: "dark",
+                //    flex: 1,
+                //    direction: "horizontal",
+                //    defaults: { styleHtmlContent: true },
+                //    items: [{
+                //        html: "左视图",
+                //        style: "background-color:red"
+                //    }, {
+                //        html: "中视图",
+                //        style: "background-color:blue"
+                //    }, {
+                //        html: "右视图",
+                //        style: "background-color:yellow"
+                //    }]
+                //});
+                //var carousel2 = Ext.create("Ext.Carousel", {
+                //    ui: "dark",
+                //    flex: 1,
+                //    direction: "vertical",
+                //    defaults: { styleHtmlContent: true },
+                //    items: [{
+                //        html: "上视图",
+                //        style: "background-color:#ccc"
+                //    }, {
+                //        html: "中视图",
+                //        style: "background-color:blue"
+                //    }, {
+                //        html: "下视图",
+                //        style: "background-color:yellow"
+                //    }]
+                //});
+                //var Carousel = Ext.create("Ext.Panel", {
+                //    id: "myPanel",
+                //    fullscreen: true,//注意这里低版本可以不加，但是高版本不加将看不到效果
+                //    layout: {
+                //        type: 'vbox',
+                //        align: 'stretch'
+                //    },
+                //    items: [carousel1, carousel2]//按照区别点
+                //});
+                //carousel1.animateActiveItem(3);//setActiveItem()、prev()、next()
+
+                //--使用xtype--
+                var panel = Ext.create("Ext.Panel", {
+                    fullscreen: true,
+                    defaults: {
+                        ui: "dark",
+                        xtype: "carousel",
+                        defaults: { xtype: 'panel' }
+                    },
+                    layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
+                    items: [
+                        {
+                            id: 'carousel1', flex: 1,
+                            direction: 'vertical',
+                            items: [{
+                                html: "左视图",
+                                style: "background-color:#ccc"
+                            }, {
+                                html: "中视图",
+                                style: "background-color:blue"
+                            }, {
+                                html: "右视图",
+                                style: "background-color:yellow"
+                            }]
+                        },
+                        {
+                            id: 'carousel2', flex: 2,
+                            direction: 'horizontal',
+                            items: [{
+                                html: "上视图",
+                                style: "background-color:#ccc"
+                            }, {
+                                html: "中视图",
+                                style: "background-color:blue"
+                            }, {
+                                html: "下视图",
+                                style: "background-color:yellow"
+                            }]
+                        }
+                    ]
+                });
+                //panel.getComponent('carousel1').setActiveItem(1);
+                panel.getInnerItems()[0].setActiveItem(1);//经验证，上下两个方法差不多
+                alert(panel.getXTypes());
+            }
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>require依赖管理</title>
+    <style>
+        #demo_div { border: solid 1px #000; }
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { margin: 0px; padding: 0px; }
+        body, html, form { font: 12px/1.125 宋体,Arial,Helvetica,sans-serif; }
+        html { display: block; }
+        table { border-collapse: collapse; boder-spacing: 0px; }
+        fieldset, img { border: 0px; }
+        address, caption, cite, code, dfn, em, th, var { font-style: normal; font-weight: normal; }
+        strong { font-style: normal; }
+        ol, ul { list-style: none; }
+        caption, th { text-align: left; }
+        q:before, q:after { content: ''; }
+        abbr, acronym { border: 0px; }
+        .w_100 { width: 200%; }
+        .fl { float: left; display: inline; }
+        .mc { margin: 0 auto; }
+        .bd1 { border: solid 1px #000; }
+        .clearfix:after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }
+        .dtab_defalut { float: left; display: inline; width: 100px; border: solid 1px #ccc; border-bottom: 0px; height: 30px; line-height: 30px; border-radius: 4px 4px 0px 0px; margin: 0 3px; text-align: center; background: #e3e8f6; cursor: default; }
+            .dtab_defalut:hover, .dTab_active { background: #9ccfe0; color: #fff; font-weight: bold; }
+        section { width: 100%; background: #9ccfe0; float: left; }
+    </style>
+    <script data-main="main" src="require.js" defer async="true"></script>
+</head>
+<body>
+    require依赖管理实验
+    <div id="demo_div">测试元素</div>
+    <div class="mc clearfix" style="width: 324px; margin-top: 30px">
+        <nav>
+            <ul class="w_100 fl">
+                <li><span class="dtab_defalut dTab_active" id="commandId_1">产品资料1</span></li>
+                <li><span class="dtab_defalut dTab_static" id="commandId_2">产品参数2</span></li>
+                <li><span class="dtab_defalut dTab_static" id="commandId_3">评测文章2</span></li>
+            </ul>
+        </nav>
+        <section id="warp_1">
+            <h1>产品资料1</h1>
+            <div>产品资料产品资料产品资料产品资料产品资料产品资料产品资料产品资料产品资料</div>
+        </section>
+        <section id="warp_2">
+            <h1>产品参数2</h1>
+            <div>产品参数产品参数产品参数产品参数产品参数产品参数产品参数产品参数产品参数产品参数</div>
+        </section>
+        <section id="warp_3">
+            <h1>评测文章2</h1>
+            <div>评测文章评测文章评测文章评测文章评测文章评测文章评测文章</div>
+        </section>
+    </div>
+</body>
+</html>

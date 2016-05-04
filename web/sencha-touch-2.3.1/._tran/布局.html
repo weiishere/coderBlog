@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>布局</title>
+    <style>
+        .hid { display:none}
+    </style>
+    <link href="../resources/css/sencha-touch.css" rel="stylesheet" />
+    <script src="../sencha-touch-debug.js"></script>
+    <script>
+        Ext.require("Ext.Panel");
+        Ext.require("Ext.Carousel");
+        Ext.application({
+            icon: '168.png',
+            glossOnIcon: false,
+            tabletStartupScreen: '168.png',
+            phoneStartupScreen: '168.png',
+            launch: function () {
+                //var myPanel = Ext.create("Ext.Panel", {
+                //    id: "myPanel", fullscreen: true,
+                //    layout: {
+                //        type: "vbox",//区别点
+                //        align: "stretch",
+                //    },
+                //    items: [{
+                //        flex: 1,
+                //        html: "子组件",
+                //        style: "background-color:#5e99cc"
+                //    }, {
+                //        flex: 2,
+                //        html: "子组件2",
+                //        style: "background-color:#759e60"
+                //    }]
+                //});
+
+                //var myPanel = Ext.create("Ext.Panel", {
+                //    id: "myPanel", fullscreen: true,
+                //    layout:'card',//区别点，按照card模式布局
+                //    items: [{
+                //        html: "Fit布局的示例1",
+                //        style: "background-color:#5e99cc"
+                //    },
+                //    {
+                //        html: "Fit布局的示例2",
+                //        style: "background-color:#5e990c"
+                //    }]
+                //});
+                //myPanel.setActiveItem(1);
+
+                
+                var p1 = Ext.create("Ext.Panel", {
+                    flex: 1,
+                    id: 'panel1',
+                    style: 'background-color:#00c',
+                    html: '示例面板1'
+                });
+                var p2 = Ext.create("Ext.Panel", {
+                    flex: 2,
+                    id: 'panel2',
+                    style: 'background-color:#f00',
+                    html: '示例面板2'
+                });
+                var panel = Ext.create("Ext.Panel", {
+                    id: "myPanel",
+                    fullscreen: true,
+                    layout: {
+                        type: 'vbox',
+                        align: 'stretch'
+                    },
+                    items: [p1, p2]//按照区别点
+                });
+                
+            }
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

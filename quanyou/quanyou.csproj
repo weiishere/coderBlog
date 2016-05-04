@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CC8BA5D2-2E7C-4198-884D-E474F6F0ACC0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>quanyou</RootNamespace>
+    <AssemblyName>quanyou</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>%24/webTest/coderBlog/quanyou</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://zhangktest.visualstudio.com/defaultcollection</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Content\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\javascript\index.js" />
+    <Content Include="Content\javascript\jquery-1.8.2.min.js" />
+    <Content Include="Content\javascript\main.js" />
+    <Content Include="Content\style\Base.css" />
+    <Content Include="Content\style\content.css" />
+    <Content Include="Content\style\main.css" />
+    <Content Include="Content\img\opacity_20.png" />
+    <Content Include="Images\家具\1.jpg" />
+    <Content Include="Images\家具\2.jpg" />
+    <Content Include="Images\家具\20130720114302_0807.jpg" />
+    <Content Include="Images\家具\3.JPG" />
+    <Content Include="Images\家具\aboutus02.jpg" />
+    <Content Include="Images\家具\contactus.jpg" />
+    <Content Include="Images\家具\logo.jpg" />
+    <Content Include="Images\家具\taboutus01.jpg" />
+    <Content Include="Images\家具\卧室\WS_1_B.jpg" />
+    <Content Include="Images\家具\卧室\WS_1_S.jpg" />
+    <Content Include="Images\家具\卧室\WS_2_B.JPG" />
+    <Content Include="Images\家具\卧室\WS_2_S.JPG" />
+    <Content Include="Images\家具\卧室\WS_3_B.JPG" />
+    <Content Include="Images\家具\卧室\WS_3_S.JPG" />
+    <Content Include="Images\家具\卧室\WS_4_B.JPG" />
+    <Content Include="Images\家具\卧室\WS_4_S.JPG" />
+    <Content Include="Images\家具\床具\CJ_10_B.jpg" />
+    <Content Include="Images\家具\床具\CJ_10_S.jpg" />
+    <Content Include="Images\家具\床具\CJ_11_B.jpg" />
+    <Content Include="Images\家具\床具\CJ_11_S.jpg" />
+    <Content Include="Images\家具\床具\CJ_12_B.jpg" />
+    <Content Include="Images\家具\床具\CJ_12_S.jpg" />
+    <Content Include="Images\家具\床具\CJ_13_B.jpg" />
+    <Content Include="Images\家具\床具\CJ_13_S.jpg" />
+    <Content Include="Images\家具\床具\CJ_14_B.jpg" />
+    <Content Include="Images\家具\床具\CJ_14_S.jpg" />
+    <Content Include="Images\家具\床具\CJ_15_B.jpg" />
+    <Content Include="Images\家具\床具\CJ_15_S.jpg" />
+    <Content Include="Images\家具\床具\CJ_16_B.jpg" />
+    <Content Include="Images\家具\床具\CJ_16_S.jpg" />
+    <Content Include="Images\家具\床具\CJ_17_B.jpg" />
+    <Content Include="Images\家具\床具\CJ_17_S.jpg" />
+    <Content Include="Images\家具\床具\CJ_18_B.jpg" />
+    <Content Include="Images\家具\床具\CJ_18_S.jpg" />
+    <Content Include="Images\家具\床具\CJ_1_B.jpg" />
+    <Content Include="Images\家具\床具\CJ_1_S.jpg" />
+    <Content Include="Images\家具\床具\CJ_2_b.jpg" />
+    <Content Include="Images\家具\床具\CJ_2_S.jpg" />
+    <Content Include="Images\家具\床具\CJ_3_B.jpg" />
+    <Content Include="Images\家具\床具\CJ_3_S.jpg" />
+    <Content Include="Images\家具\床具\CJ_4_B.jpg" />
+    <Content Include="Images\家具\床具\CJ_4_S.jpg" />
+    <Content Include="Images\家具\床具\CJ_5_B.jpg" />
+    <Content Include="Images\家具\床具\CJ_5_S.jpg" />
+    <Content Include="Images\家具\床具\CJ_6_B.jpg" />
+    <Content Include="Images\家具\床具\CJ_6_S.jpg" />
+    <Content Include="Images\家具\床具\CJ_7_B.jpg" />
+    <Content Include="Images\家具\床具\CJ_7_S.jpg" />
+    <Content Include="Images\家具\床具\CJ_8_B.jpg" />
+    <Content Include="Images\家具\床具\CJ_8_S.jpg" />
+    <Content Include="Images\家具\床具\CJ_9_B.jpg" />
+    <Content Include="Images\家具\床具\CJ_9_S.jpg" />
+    <Content Include="Images\家具\床垫\CD_10_B.jpg" />
+    <Content Include="Images\家具\床垫\CD_10_S.jpg" />
+    <Content Include="Images\家具\床垫\CD_11_b.jpg" />
+    <Content Include="Images\家具\床垫\CD_11_S.jpg" />
+    <Content Include="Images\家具\床垫\CD_12_B.jpg" />
+    <Content Include="Images\家具\床垫\CD_12_S.jpg" />
+    <Content Include="Images\家具\床垫\CD_13_B.jpg" />
+    <Content Include="Images\家具\床垫\CD_13_S.jpg" />
+    <Content Include="Images\家具\床垫\CD_14_B.jpg" />
+    <Content Include="Images\家具\床垫\CD_14_S.jpg" />
+    <Content Include="Images\家具\床垫\CD_1_B.jpg" />
+    <Content Include="Images\家具\床垫\CD_1_S.jpg" />
+    <Content Include="Images\家具\床垫\CD_2_B.jpg" />
+    <Content Include="Images\家具\床垫\CD_2_S.jpg" />
+    <Content Include="Images\家具\床垫\CD_3_B.jpg" />
+    <Content Include="Images\家具\床垫\CD_3_S.jpg" />
+    <Content Include="Images\家具\床垫\CD_4_B.jpg" />
+    <Content Include="Images\家具\床垫\CD_4_S.jpg" />
+    <Content Include="Images\家具\床垫\CD_5_B.jpg" />
+    <Content Include="Images\家具\床垫\CD_5_S.jpg" />
+    <Content Include="Images\家具\床垫\CD_6_B.jpg" />
+    <Content Include="Images\家具\床垫\CD_6_S.jpg" />
+    <Content Include="Images\家具\床垫\CD_7_B.jpg" />
+    <Content Include="Images\家具\床垫\CD_7_S.jpg" />
+    <Content Include="Images\家具\床垫\CD_8_B.jpg" />
+    <Content Include="Images\家具\床垫\CD_8_S.jpg" />
+    <Content Include="Images\家具\床垫\CD_9_B.jpg" />
+    <Content Include="Images\家具\床垫\CD_9_S.jpg" />
+    <Content Include="Images\家具\资讯中心\20130226104049046.jpg" />
+    <Content Include="Images\家具\资讯中心\20130314135650943.jpg" />
+    <Content Include="Images\家具\资讯中心\20130412105403517.jpg" />
+    <Content Include="Images\家具\资讯中心\tnews01.jpg" />
+    <Content Include="Page\aboutMe.html" />
+    <Content Include="Page\bootstrap.html" />
+    <Content Include="Page\contactMe.html" />
+    <Content Include="Page\index.html" />
+    <Content Include="Page\newsCenter.html" />
+    <Content Include="Page\newsDetails.html" />
+    <Content Include="Page\productsCenter.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49764/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

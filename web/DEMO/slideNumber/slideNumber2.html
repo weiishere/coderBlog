@@ -1,0 +1,226 @@
+﻿@model USO.Products.ViewModels.StockNumberRoleSearchViewModel
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head2">
+    <title>属性过滤</title>
+    <base target="_self" />
+    <script src="~/Scripts/2013.1.219/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <style>
+        body { font-size: 12px; }
+        .clearfix:after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }
+        #slideLineWrap { width: auto; height: auto; border: solid 1px #999; margin: 50px auto; display: inline-block; position: relative; }
+        .slideBlock ,.slideBlock2{ position: absolute; width: 10px; height: 22px; background: #000; top: 0px; left: 0px; cursor: col-resize; }
+    
+        #slideLineWrap i { float: left; margin: 0 10px; line-height: 20px; }
+        /*#slideLineWrap input { float:right}*/
+        #slideLine { width: 640px; height: 10px; background: red; float: left; margin: 6px auto; }
+        #resultWrap div { border: solid 1px #ccc; margin: 5px; padding: 3px; }
+        .topNum { position: absolute; top: -30px; left: -35px; background: #ccc; color: #333; height: 25px; line-height: 25px; border: solid 1px #666; text-align: center; width: 70px; cursor: text; }
+        .topNum_input { width: 60px; text-align: center; }
+        #resultWrap { width:100%;line-height:30px}
+            #resultWrap th { background:#ccc}
+        #resultWrap td{border-bottom:solid 1px #999;}
+        #resultWrap strong { display:inline-block;min-width:200px;font-weight:normal}
+        .slideBlock span {position:absolute;width:14px;height:14px;background:#ccc;bottom:-14px;left:-2px;text-align:center;line-height:10px;cursor:pointer}
+            .slideBlock span:hover { background:#999;color:#fff}
+    </style>
+</head>
+<body>
+    <input type="hidden" id="hf_data" value="@Model.jsonStr" />
+    <div>
+        设置区间最大值:<input id="input_maxNumber" type="text"  value="10000" /><input type="button" onclick="init()" value="生成" />
+    </div>
+    <div id="slideLineWrap" class="clearfix">
+        <i>0</i>
+        <div id="slideLine"></div>
+        <i>10000</i>
+    </div>
+    
+    <table id="resultWrap" cellpadding="0" cellspacing="0">
+        
+    </table>
+    <div style="text-align:right;margin-top:10px">
+        @using (Html.BeginForm("UpdateStockNumberRole", "StockNumberRole", FormMethod.Post))
+                        {
+                            <input type="hidden" value="" name="hf_submitValue" id="hf_submitValue" />
+                            <input type="hidden" value="@Model.category3.Id" name="hf_c3Id" id="hf_c3Id" />
+                            <input type="submit" value="确认更新" onclick="return submitgo()" class="input_button_save"/>
+                        }
+    </div>
+</body>
+<script>
+    jQuery.extend(
+    {
+        evalJSON: function (strJson) {
+            try {
+                return eval('(' + strJson + ')');
+            } catch (e) {
+                return [];
+            }
+        }
+    });
+    (function ($, pro) {
+        var SlideBlock = function (_number, isDetails, _content, _domId) {
+            this.number = _number;
+            this.isDetails = isDetails;
+            this.content = _content;
+            this.domId = _domId;
+        }
+        //alert($("#hf_data").val());
+
+
+
+        var findSlideBlock = function (id) {
+            var result;
+            $.each(SlideBlockArray, function (i, item) {
+                if (item.domId == id) {
+                    result = item;
+                    return false;
+                }
+            });
+            return result;
+        }
+        pro.init = function (exp, isCustom) {
+            exp = (null || pro);
+            exp.SlideBlockArray = [];
+            exp.data = $.evalJSON($("#hf_data").val());
+            var _arr = data.surList.sort(function (x, y) { return x.EndNumber - y.EndNumber; });
+            if (_arr.length == 0) { isCustom = true }
+            exp.maxNumber = isCustom ? parseInt($("#input_maxNumber").val()) : _arr[_arr.length - 1].EndNumber;
+            $("#input_maxNumber").val(exp.maxNumber);
+            exp.slideLineWrap = $("#slideLineWrap");
+            exp.slideLine = $("#slideLine");
+            exp.resultWrap = $("#resultWrap");
+            exp.activeSlideBlock;
+            exp.mouseGo = 0;
+            exp.ismove = false;
+            exp.z_index = exp.z_index || 0;
+            $("#slideLineWrap i:eq(1)").html(maxNumber);
+
+            $.each(_arr, function (i, item) {
+                var number = (item.EndNumber / maxNumber) * slideLine.width();
+                var slideBlock = new SlideBlock(item.EndNumber, item.IsDetails == 0 ? true : false, item.Describe, "id_" + number);
+                if (i != _arr.length - 1) {
+                    slideLineWrap.append("<div id='id_" + number + "' class='slideBlock' style='left:" + (number + (slideLine.position().left) / 2 + 8) + "px'><div class='topNum'>" + item.EndNumber + "</div><span title='删除'>x</span></div>");
+                }
+                SlideBlockArray.push(slideBlock);
+            });
+            //加上最大值
+            //alert(item.EndNumber);
+            //var slideBlock = new SlideBlock(maxNumber, true, maxNumber + "以上", "id_" + maxNumber);
+            //slideLineWrap.append("<div id='id_" + slideLine.width() + "' class='slideBlock2' style='left:" + slideLine.width() + 8 + "px'><div class='topNum'>" + maxNumber + "</div><span title='删除'>x</span></div>");
+            //_arr.push();
+            initResult();
+        }
+        var insertSlideBlock = function (number) {
+            var numberResult = parseInt((parseInt(number - 8) / slideLine.width()) * maxNumber);
+            slideLineWrap.append("<div id='id_" + number + "' class='slideBlock' style='left:" + (number + (slideLine.position().left) / 2) + "px'><div class='topNum'>" + numberResult + "</div><span title='删除'>x</span></div>");
+            var slideBlock = new SlideBlock(numberResult, true, "大于" + maxNumber, "id_" + number);
+            SlideBlockArray.push(slideBlock);
+
+            //initResult();
+        }
+        var initResult = function () {
+            if (SlideBlockArray.length == 0) {
+                $(".slideBlock,#resultWrap div").remove();
+                return false;
+            }
+            SlideBlockArray.sort(function (x, y) { return x.number - y.number });
+            var html = "";
+            var minNumber = 0;
+            //alert(SlideBlockArray.length);
+            $.each(SlideBlockArray, function (i, item) {
+
+                if (i != SlideBlockArray.length - 1) {
+                    html += "<tr><td>" + minNumber + " to " + item.number + "</td><td><label><input type='checkbox' /></label>&nbsp;&nbsp;<input type='text' value='大于" + minNumber + "'/></td></tr>";
+                } else {
+                    html += "<tr><td>" + minNumber + " 以上</td><td><label><input type='checkbox' /></label>&nbsp;&nbsp;<input type='text' value='大于" + minNumber + "'/></td></tr>";
+                }
+                item.content = "大于" + minNumber;
+                minNumber = item.number + 1;
+            });
+            //html += "<tr><td>" + (minNumber-1) + " to " + maxNumber + "</td><td><label><input type='checkbox' /></label>&nbsp;&nbsp;<input type='text' value='大于" + maxNumber + "'/></td></tr>";
+            //html += "<tr><td>" + maxNumber + "以上</td><td><label><input type='checkbox' /></label>&nbsp;&nbsp<input type='text' value='大于" + maxNumber + "'/></td></tr>";
+            resultWrap.html("<tr><th style='width:250px'>库存数量区间</th><th>是否显示准确库存量/描述内容</th></tr>" + html);
+        }
+        var textInputCommand = function (textInput) {
+            var _num = $(textInput).val(); var dom = $(textInput).parent().parent();
+            if (!isNaN(_num)) {
+                if (_num <= 0 || _num >= maxNumber) { alert("输入超出范围"); return false; }
+            } else {
+                alert("请输入数字");
+                return false;
+            }
+            var number = (_num / maxNumber) * slideLine.width();
+            dom.css("left", number + slideLine.position().left - 5);
+            findSlideBlock(dom[0].id).number = _num;
+            dom.find("div").html(_num);
+            initResult();
+        }
+        $(document).delegate("div.slideBlock", "mousedown", function (e) {
+            activeSlideBlock = findSlideBlock(this.id);
+            mouseGo = (e || window.event).clientX;
+            ismove = true;
+            var dom = $(this).css("cursor", "col-resize");
+            var lineLeft = slideLine.position().left;
+            var slideLineWidth = slideLine.width();
+            z_index++;
+            $(this).css("z-index", z_index);
+            $("body").mousemove(function (e) {
+                if (!ismove) { return false; }
+                var ex = (e || window.event).clientX;
+                var conMouseGo = ex - mouseGo;
+                var left = dom.position().left;
+                if ((left + 5 <= lineLeft && conMouseGo < 0) || (left >= lineLeft + slideLineWidth - 5 && conMouseGo > 0)) { return false; }
+                dom.css("left", left + conMouseGo);
+                mouseGo = ex;
+                var numberResult = parseInt((parseInt(dom.position().left - slideLine.position().left + 5) / slideLine.width()) * maxNumber);
+                if (numberResult < 0) { numberResult = 0; } if (numberResult > maxNumber) { numberResult = maxNumber; }
+                if (dom.find("input").size() == 0) { dom.find("div").html(numberResult); } else { dom.find("input").val(numberResult); }
+            }).mouseup(function () {
+                var numberResult = parseInt((parseInt(dom.position().left - slideLine.position().left + 5) / slideLine.width()) * maxNumber);
+                activeSlideBlock.number = numberResult;
+                if (ismove) { initResult(); }
+                ismove = false;
+                $("body").unbind("mousemove").unbind("mouseup");
+
+            });
+        }).delegate("div.topNum", "click", function () {
+            if ($(this).find("input").size() == 0) {
+                var _num = parseFloat($(this).html());
+                $(this).html("<input class='topNum_input' type='text' value='" + _num + "'>").find("input")[0].select();
+            }
+        }).delegate("input.topNum_input", "keypress", function (e) {
+            if ((e || window.event).keyCode == 13) {
+                textInputCommand(this);
+            }
+        }).delegate("input.topNum_input", "blur", function (e) {
+            textInputCommand(this);
+        }).delegate("span", "click", function () {
+            var sb = findSlideBlock($(this).parent()[0].id);
+            var newArray = [];
+            $.each(SlideBlockArray, function (i, item) {
+                if (item !== sb) newArray.push(item);
+            });
+            SlideBlockArray = newArray;
+            $(this).parent().remove();
+            initResult();
+        });
+
+        init(pro, false);
+        resultWrap.delegate(":checkbox", "click", function (e) {
+            $(this).parent().next().attr("disabled", this.checked);
+        });
+        slideLine.click(function (e) {
+            var ex = (e || window.event).clientX;
+            var po_x = ex - slideLine.position().left;
+            insertSlideBlock(po_x);
+            initResult()
+        });
+        pro.submitgo = function () {
+            alert("e");
+            return false;
+        }
+    })(jQuery, window);
+</script>
+</html>

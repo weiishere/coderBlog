@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>居中测试</title>
+    <style>
+        .wrap { width:700px;height:600px;margin:0 auto;background:#96e0f1;text-align:center;position:relative}
+        .content {background:#ff6a00; position:absolute;top: 0; left: 0; bottom: 0; right: 0;
+                  width: 300px;height: 200px;margin:auto;
+        }
+        .content2 { left:50%; top:50%; transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); 
+                    background-color:gray; color:white; position:absolute;}/*不太灵活*/
+        .content3 {
+          width: 60%;height: 60%;min-width: 400px; max-width: 500px;padding: 40px;background:#ff6a00;
+          overflow: auto;margin: auto;position: absolute;top: 0; left: 0; bottom: 0; right: 0;
+        }
+        .content4 { background:#ff6a00;width: 200px;height: 50%;margin: auto;overflow: auto;position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;text-align: center;display:table-cell;
+        }/*内容块将垂直居中，top, left, bottom, right 可以设置偏移*/
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="content3">
+            eeeeessssssssssssssssssss
+        </div>
+    </div>
+</body>
+</html>

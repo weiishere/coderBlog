@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <a href="javascript:;">选择地址触发</a>
+</body>
+</html>
+<script src="jquery.js"></script>
+<script src="underscore.js"></script>
+<script src="backbone.js"></script>
+<script src="backbone-localstorage.js"></script>
+<script src="area.js"></script>
+<script>
+    $(function () {
+        var address = Backbone.Model.extend({
+            defaults: function () {
+                return {
+                    province: { name: "noData", id: 0 },
+
+                }
+            }
+        });
+    });
+</script>

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>NavigationView</title>
+    <link href="../resources/css/sencha-touch.css" rel="stylesheet" />
+    <script src="../sencha-touch-debug.js"></script>
+    <script>
+        Ext.require(["Ext.Panel", "Ext.NavigationView"]);
+        Ext.application({
+            icon: '168.png',
+            glossOnIcon: false,
+            tabletStartupScreen: '168.png',
+            phoneStartupScreen: '168.png',
+            launch: function () {
+                //2.3.2的官方例子
+                //var view = Ext.create('Ext.NavigationView', {
+                //    fullscreen: true,
+                //    items: [{
+                //        title: 'First',
+                //        items: [{
+                //            xtype: 'button',
+                //            text: 'Push a new view!',
+                //            handler: function () {
+                //                // use the push() method to push another view. It works much like
+                //                // add() or setActiveItem(). it accepts a view instance, or you can give it
+                //                // a view config.
+                //                view.push({
+                //                    title: 'Second',
+                //                    html: 'Second view!'
+                //                });
+                //            }
+                //        }]
+                //    }]
+                //});
+
+                var view = Ext.create("Ext.NavigationView", {
+                    fullscreen: true,
+                    navigationBar: {
+                        docked:'bottom'
+                    },
+                    useTitleForBackButtonText:true,//讲侯桂按钮的文字修改为位于栈中当前组件后面的组件的标题文字
+                    items: [
+                        { title: "标题1", html: "组件1" }
+                    ]
+                });
+                var panel = Ext.create("Ext.Panel", {
+                    title: "标题二",
+                    html: "组件2"
+                });
+                var panel2 = Ext.create("Ext.Panel", {
+                    title: "标题三",
+                    html: "组件3"
+                });
+                view.push(panel);
+                view.push(panel2);
+            }
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+﻿body { font-family: 'Microsoft YaHei'; background: #fff; }
+a { text-decoration: none; color:#000099 }
+.header { width: 100%; overflow: hidden; /*background: url("image/header_bg.gif")*/; background: #eee; position: relative; }
+.index_bar { background: url("../image/top_bg.png"); height: 20px; border-bottom: solid 2px #ba7a1b; border-top: solid 2px #ba7a1b; width: 100%; }
+.top_bar { width: 100%; height: 20px; background: #cecece; }
+    .top_bar div { width: 1024px; margin: 0 auto; text-align: right; }
+        .top_bar div img { margin-top: 2px; vertical-align:bottom}
+
+.header .header_top { width: 1024px; margin: 0 auto; height: 100px; }
+    .header .header_top .logo img { width: 80px; margin: 10px; vertical-align: middle; }
+    .header .header_top .logo h1 { display: inline-block; font-size: 26px; color: #ff0000; font-family: LiSu; }
+    .header .header_top h2 { line-height: 100px; color: #ff0000; }
+.header .header_menu { width: 100%; height: 40px; background: #ff0000; }
+    .header .header_menu .nav_wrap { width: 1024px; margin: 0 auto; text-align: left; }
+
+    .header .header_menu ul { width: 1024px; height: 100%; text-align: left; display: inline-block; }
+        .header .header_menu ul li { width: 170px; float: left; color: #fff; line-height: 40px; font-size: 14px; text-align: center; }
+            .header .header_menu ul li a { color: #fff; display: inline-block; width: 90%; height: 100%; transition: all 0.2s ease-out; }
+                .header .header_menu ul li a:hover { background: #ff6f6f; width: 100%; text-shadow: 1px 1px 2px #000; }
+.slidesjs-pagination { width: 100%; height: 17px; }
+    .slidesjs-pagination li { width: 20%; height: 100%; background: #fff; text-align: center; display: inline-block; text-align: center; line-height: 17px; }
+        .slidesjs-pagination li a { display: inline-block; width: 20%; height: 100%; transition: all 0.4s ease-out; background: #d99531; font-weight: bold; color: #000; }
+        .slidesjs-pagination li .active { background: #ff0000; color: #fff; width: 100%; }
+
+@-webkit-keyframes jump {
+    0% { -webkit-transform: translate(0, 0px); }
+    25% { -webkit-transform: translate(0, -15px); }
+    50% { -webkit-transform: translate(0, 0px) rotate(0deg) scale(1.2, 1)}
+    75% { -webkit-transform: translate(0, 5px); }
+    100% { -webkit-transform: translate(0, 0px); }
+}
+@-moz-keyframes jump {
+    0% { -moz-transform: translate(0, 0px); }
+    25% { -moz-transform: translate(0, -15px); }
+    50% { -moz-transform: translate(0, 0px) rotate(0deg) scale(1.2, 1);  }
+    75% { -moz-transform: translate(0, 5px); }
+    100% { -moz-transform: translate(0, 0px); }
+}
+
+.content { width: 100%; }
+.content_main { width: 1024px; margin: 0 auto;margin-bottom:15px }
+    .content_main .c_main_area { text-align: center; width: 341px; float: left; position: relative; }
+.animation { animation-name: jump; animation-duration: 0.5s; animation-timing-function: linear; animation-iteration-count: infinite;animation-iteration-count:1 }
+.content_main .c_main_area h2 { display: inline-block; width: 200px; height: 100px; border-radius: 100px; background: #ff6a00; line-height: 95px; /*transition: all 0.2s ease-out;*/ cursor: default; margin-top: 20px; }
+    .content_main .c_main_area h2 s { display: inline-block; width: 20px; height: 28px; vertical-align: middle; background: url("../image/star2.png") 0 0px no-repeat; padding: 0 3px; }
+.content_main .c_main_area_active h2 { /*width: 210px; line-height: 95px; font-size: 20px;*/ -webkit-animation: jump 0.5s linear 0 1;animation-name: jump; animation-duration: 0.5s; animation-timing-function: linear; animation-iteration-count: infinite;animation-iteration-count:1 }
+.content_main .c_main_area p { width: 80%; margin: 10px auto; font-size: 16px; line-height: 23px; }
+.content_main .c_main_area .fg { position: absolute; right: -1px; width: 3px; height: 300px; top: 20px; overflow: hidden; }
+.footer { width: 100%; height: auto; background: #cea569; }
+    .footer .footer_wrap { width: 1024px; margin: 0 auto; text-align:center}
+        .footer .footer_wrap ul {width:auto;display:inline-block;margin:15px auto}
+            .footer .footer_wrap ul li { display:inline-block;width:100px}
+        .footer .footer_wrap div { margin:15px auto;font-size:14px}
+            .footer .footer_wrap a { color: #000; }
+            .footer .footer_wrap div img { vertical-align:middle;margin-right:10px}
+
+.list_header{ border-bottom:dotted 1px #666;line-height:60px}
+    .list_header h2 { font-size:16px;}
+.list_sideBar {float:left;width:150px;min-height:100px;margin:10px 0 }
+    .list_sideBar ul { width:96%; margin:0 auto}
+        .list_sideBar ul li { width:100%;border-bottom:solid 1px #ccc;line-height:40px;font-size:14px;text-indent:5px;}
+            .list_sideBar ul li a { display:block;width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+                .list_sideBar ul .active { background:#ff0000;font-weight:bold;border-radius:10px;border-bottom:0}
+                    .list_sideBar ul .active a { color:#fff;}
+
+.article_content,.list_content {width:850px;margin-left:20px;float:left;}
+.list_content ul {width:100%;margin:20px 0}
+.list_content ul li {line-height:30px;border-bottom:#eee solid 1px;transition: all 0.2s ease-out; border-radius:8px}
+.list_content ul li:hover {background:#ebe8e8;-webkit-transform: translate(3px, 0px);}
+    .list_content ul li a {display:inline-block;width:770px;text-indent:3px}
+    .article_content h2 { border-bottom:dashed 1px #ccc;line-height:60px}
+.article_text { font-size:16px;margin:20px 0;line-height:30px;color:#666}

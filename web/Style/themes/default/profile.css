@@ -1,0 +1,35 @@
+﻿.profile_MenuOutWrap { width:100%;height:auto;}
+    .profile_MenuOutWrap nav { width:1024px;height:20px;margin:15px auto;text-align:center}
+        .profile_MenuOutWrap nav ul { width:auto;height:100%;display:inline-block}
+            .profile_MenuOutWrap nav ul li { width:auto;padding:0px 20px; height:100%;border-right:solid 1px #666;display:inline-block;line-height:20px}
+
+.profileBodyWrap { width: 1024px; height: auto; margin: 10px auto; border: solid 1px #999; border-radius: 8px; overflow: hidden;}
+.profile_sideBar {float:left;width:230px;height:100%;}
+    .profile_sideBar header { margin-bottom:10px}
+    .profile_sideBar header h1 { font-size: 16px; display: block; width: 100%; height: 30px; border-bottom: solid 1px #999;text-indent:1em;line-height:30px;
+                                 text-shadow:#999 1px 1px 2px;color:#333;background:#D4D1D1;border-top:solid 1px #EFEFF2}
+    .profile_sideBar figure { width:100%; margin:0px}
+    .profile_sideBar figure img{width:210px;margin:8px 0px 0px 8px;padding:1px; border:solid 1px #999;box-shadow:#999 2px 2px 4px}
+        .profile_sideBar figure figcaption { text-indent:1em;}
+    .profile_sideBar section {width:100% }
+        .profile_sideBar section h1 { font-size: 14px; display: block; width: 100%; height: 30px;background:#D4D1D1;
+                                      border-bottom: solid 1px #999;border-top:solid 1px #999;line-height:30px;text-indent:1em}
+        .profile_sideBar section > nav>span {display:block; margin:0px auto;width:100%;line-height:25px;color:#666;text-indent:1em}
+            .profile_sideBar section > nav > span:hover { background:#fff}
+            .profile_sideBar section > nav > span mark {background:transparent;color:#333;}
+.timeBarWrap > div { width: 100%; text-indent: 1em; line-height: 30px; }
+
+.profile_contentWrap { width: 790px; float: left; height: 100%; border-left: solid 1px #999; min-height: 800px; }
+
+.profileSectionContentWeap { width:770px;height:100%;margin:20px 0px 0px 20px;}
+    .profileSectionContentWeap > header > h1 {  font-size:12px; color:#666}
+    .profileSectionContentWeap > section {  margin: 10px 0px 10px 10px;border-bottom:dashed 1px #ccc;}
+        .profileSectionContentWeap > section h1 { font-size: 14px; line-height: 30px; display: inline-block; }
+            .profileSectionContentWeap > section h1 > q { font-weight: normal; font-size: 12px; color: #666; margin-left: 5px; }
+        .profileSectionContentWeap > section time { display: inline-block; color: #999; margin-left: 10px; }
+        .profileSectionContentWeap > section header span { float: right; }
+        .profileSectionContentWeap > section header > div { color: #666; }
+        .profileSectionContentWeap > section > div { color: #666; text-indent: 2em; margin-top: 15px; }
+        .profileSectionContentWeap > section figure { text-indent: 0px; }
+        .profileSectionContentWeap > section footer a { line-height: 25px; margin-right: 10px; }
+.profileIndexPageWrap { width: 100%; height: 20px; }

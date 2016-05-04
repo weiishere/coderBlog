@@ -1,0 +1,128 @@
+﻿body { background:#EFEFF2;font-family:微软雅黑,Arial,Tahoma;}
+a{text-decoration:none; color:#666}
+a:link{text-decoration:none;color:#3450a4}
+a:hover{text-decoration:underline;color:#3450a4}
+
+/*头部*/
+.blogHead { width:100%; height:auto;}
+.headTopWrap { width:1024px; height:auto; margin:5px auto;position:relative}
+    .headTopWrap h1 { font-size:14px;color:#5e5e60;text-indent:1em}
+    .headTopWrap h2 { font-size:12px;color:#808080;text-indent:1em; margin-bottom:5px}
+.blogMainNav {width:100%; height:35px;border-top:solid 1px #e1dfdf;position:relative;z-index:10;
+                    border-bottom:solid 1px #cfcfcf;
+                    box-shadow:#999 0px 3px 5px;
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EFEFF2', endColorstr='#cccccc');
+                    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EFEFF2), color-stop(1, #cccccc)); 
+                    background-image: -moz-linear-gradient(top, #EFEFF2, #ccc);}
+
+    .blogMainNav ul {margin:0px auto; width:1024px;height:35px; line-height:35px;}
+        .blogMainNav ul li {float:left;width:124px;text-align:center; cursor:pointer; border-left:solid 1px #999;border-right:solid 1px #fcfcfc;
+                            -webkit-transition:all 0.4s ease-out;-moz-transition:all 0.4s ease-out; -o-transition:all 0.4s ease-out;-ms-transition:all 0.4s ease-out; transition:all 0.4s ease-out;}
+            .blogMainNav ul li:first-child { border-left:0px;}
+            .blogMainNav ul li:last-child {border-right:0px }
+            .blogMainNav ul li:hover { background:#EFEFF2;}
+            .blogMainNav ul li a {display:block;width:126px;height:100%;color:#333;font-size:14px}
+            .blogMainNav ul li a:hover {text-decoration:none;}
+            /*.blogMainNav ul li:hover {background-image: -moz-linear-gradient(top, #EFEFF2, #999999);
+                    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EFEFF2), color-stop(1, #999999)); 
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EFEFF2', endColorstr='#999999'); }*/
+.subModleListWrap {width:100%; height:24px;overflow:hidden}
+.subModleList {margin:0px auto;width:1024px;text-align:center}
+.subModleList ul{width:auto;max-width:1024px;height:auto;border:solid 1px #999;border-radius:0px 0px 4px 4px; display:inline; padding:4px 0px 4px 0px; line-height:22px; overflow:hidden}
+    .subModleList ul li { display:inline-block; width:auto; padding:0px 8px 0px 8px;border-right:solid 1px #999; height:23px;color:#666;cursor:pointer;}
+        .subModleList ul li:last-child { border-right:0px}
+        .subModleList ul li:hover { background:#cfcfcf;}
+
+.headUserArea { position:absolute; top:10px; right:0px; width:auto;height:auto;}
+.searchBar {width:auto; padding-right:20px;height:20px; margin-top:5px;background:#fff url("images/Search-20.png") right no-repeat;border-radius:4px;border:solid 0px #999;
+            box-shadow:#999 1px 1px 3px inset;border-bottom:solid 1px #ccc;border-right:solid 1px #ccc;}
+    .searchBar input { float:left;width:70px; background:#fff; border:solid 1px #fff; padding:0px; margin:4px;height:14px;font-size:12px; line-height:14px; color:#999;outline:none}
+
+.headUserArea a {display: inline-block; width: 18px; height: 17px; background-size: 110px 42px; margin-left:8px}
+    .headUserArea a:hover {background-size:110px 42px }
+.headLogon {  background: url("images/icon2.png") -25px -2px;  
+              -webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out; -o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out; transition:all 0.2s ease-out;
+}
+    .headLogon:hover { background:url("images/icon2.png") -25px -24px;}
+.headReg { background:url("images/icon2.png") -2px -2px;
+              -webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out; -o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out; transition:all 0.2s ease-out;
+}
+    .headReg:hover {background:url("images/icon2.png") -2px -24px}
+.headSet {background:url("images/icon2.png") -46px -2px;
+          -webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out; -o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out; transition:all 0.2s ease-out;}
+    .headSet:hover { background:url("images/icon2.png") -46px -24px}
+.headGroup { background:url("images/icon2.png") -81px -2px;
+             -webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out; -o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out; transition:all 0.2s ease-out;}
+    .headGroup:hover {background:url("images/icon2.png") -81px -24px }
+.headHelp { background:url("images/icon2.png") -89px -2px;
+            -webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out; -o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out; transition:all 0.2s ease-out;}
+    .headHelp:hover { background:url("images/icon2.png") -89px -24px}
+/*.headLogon { display:inline-block;width:20px;height:20px;background:url("images/icon2.png") -29px -2px}
+    .headLogon:hover { background:url("images/icon2.png") -29px -28px}
+.headReg { display:inline-block;width:20px;height:20px;background:url("images/icon2.png") -3px -2px}
+    .headReg:hover {background:url("images/icon2.png") -3px -28px }
+.headSet { display:inline-block;width:20px;height:20px;background:url("images/icon2.png") -55px -2px}
+    .headSet:hover { background:url("images/icon2.png") -55px -28px}
+.headGroup { display:inline-block;width:20px;height:20px;background:url("images/icon2.png") -81px -2px}
+    .headGroup:hover {background:url("images/icon2.png") -81px -28px }
+.headHelp { display:inline-block;width:20px;height:20px;background:url("images/icon2.png") -106px -2px}
+    .headHelp:hover { background:url("images/icon2.png") -106px -28px}*/
+/*面包屑导航*/
+.siteMapWrap{ width:1024px;height:20px;line-height:20px;margin:7px auto; }
+.siteMapWrap ul{ width:auto;height:100%;  border:solid 1px #ccc; border-radius:5px 0px 0px 5px; float:left;border-right:0px}
+    .siteMapWrap ul li {  padding:0px 5px 0px 15px; height:100%;min-width:50px;width:auto; float:left; white-space:nowrap; text-align:center}
+        .siteMapWrap ul li>div {float:right;width:17px; height:22px; margin:-1px -21px 0px 0px;overflow:hidden;}
+        .siteMapWrap ul li>div>span { -webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);border:1px solid #ccc;  float:left; width:22px; height:22px; margin:-1px 0px 0px -17px;}
+        .siteMapWrap ul li:hover {}
+
+/*主题*/
+.mainContent { width:1024px; height:auto; margin:10px auto;}
+.siteInfoWrap {width:990px; height:23px; border:solid 1px #666;float:left; line-height:23px; color:#333;background:#b5cbe1}
+    .siteInfoWrap header {float:left; width:auto;}
+        .siteInfoWrap header > h1 { font-size:12px;}
+    .siteInfoWrap div {float:left; width:760px}
+        .siteInfoWrap div li {  display:inline-block; margin-right:8px}
+
+.IndexSideBar { float:left; width:25px; height:auto; overflow:hidden}
+    .IndexSideBar ul { float:right; width:10px; height:100%;border:solid 1px #999; background:#e1dfdf;}
+        .IndexSideBar ul li { border-left: 1px solid #666; border-top: 1px solid #666; border-bottom: 1px solid #666; background-position: 0% 0%; float:right;width:18px;height:100px; margin:5px 0px 5px 0px; border-radius:4px 0px 0px 4px; cursor:pointer;
+                              border-right-style: none; border-right-color: inherit; border-right-width: 0px; background-color: #EFEFF2; background-repeat: repeat; background-attachment: scroll; 
+                              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EFEFF2', endColorstr='#cccccc');
+                              background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EFEFF2), color-stop(1, #cccccc)); 
+                              background-image: -moz-linear-gradient(top, #EFEFF2, #ccc); }
+            .IndexSideBar ul li > h2 {width:15px; float:left; margin-left:2px; font-weight:normal; font-size:12px}
+            .IndexSideBar ul li:hover { width:23px;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out;}
+.toggleBar {float:left; width:25px; height:25px; background:#fcfcfc;border:solid 1px #ccc; border-radius:5px 0px 0px 0px}
+    .toggleBar:hover {  background:#ccc; border:solid 1px #999}
+/*内容*/
+.contentOutWrap { width:999px;height:auto;float:left; overflow:hidden}
+.contentWrap { width:990px; height:100%; background:#EFEFF2; float:left;}
+
+.sectionContentWeap { width:970px;height:auto;margin:20px 0px 0px 20px;margin-left:-970px;display:none}
+    .sectionContentWeap > header > h1 {  font-size:12px; color:#666}
+    .sectionContentWeap > section {  margin: 10px 0px 10px 10px;border-bottom:dashed 1px #ccc}
+    .sectionContentWeap > section h1 { font-size: 14px; line-height: 30px; display: inline-block; }
+        .sectionContentWeap > section h1 > q { font-weight:normal; font-size:12px;color:#666;margin-left:5px}
+    .sectionContentWeap > section time { display: inline-block; color: #999; margin-left: 10px; }
+    .sectionContentWeap > section header span { float: right; }
+    .sectionContentWeap > section header > div {  color: #666; }
+    .sectionContentWeap > section > div { color: #666; text-indent: 2em; margin-top: 15px;}
+    .sectionContentWeap > section figure { text-indent: 0px; }
+    .sectionContentWeap > section footer a { line-height: 25px; margin-right: 10px; }
+
+.hIconArticle { background:url("images/icon1.png") 0px 5px no-repeat; text-indent:20px}
+.hIconSay { background:url("images/icon1.png") 0px -24px no-repeat; text-indent:20px}
+.hIconPic { background:url("images/icon1.png") 0px -54px no-repeat; text-indent:20px}
+.hIconAudio { background:url("images/icon1.png") 0px -87px no-repeat; text-indent:20px}
+.hIconVedio { background:url("images/icon1.png") 0px -118px no-repeat; text-indent:20px}
+
+.detailsLink { width:32px;height:18px; background:url('images/details.png');display:inline-block}
+    .detailsLink:hover { background:url('images/details.png') 0px -18px;}
+.IndexPiclist { width:100%;height:auto; text-indent:0}
+    /*.IndexPiclist li { display:inline-block;width:100px; border:solid 1px #999}*/
+        .IndexPiclist img { width:98px; padding:1px;border:solid 1px #999;box-shadow:#999 2px 2px 3px; margin-right:5px}
+.IndexPicSingle {width:100%;height:auto; text-indent:0 }
+    .IndexPicSingle img { width: 200px; padding: 1px; border: solid 1px #999; box-shadow: #999 2px 2px 3px; margin-right: 5px; }
+.vedioPic{width:200px;height:150px }
+.vedioPlay {width:200px;height:150px;position:absolute; top:0px;left:0px; background:url("images/play.png"); cursor:pointer}
+    .vedioPlay:hover {  background:url("images/play.png") 0px -150px;}

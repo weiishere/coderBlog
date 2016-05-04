@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta http-equiv="Content-Type" name="viewport" content="width=device-width; initial-scale=0.5;maximum-scale=1.0; minimum-scale=1.0; user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link href="jquery.mobile-1.4.2.min.css" rel="stylesheet" />
+    <style>
+        .borad { width: 100%; height: 100%; position: absolute; left: 0px; top: 0px; display: none; }
+        .topBarBg { width: 100%; height: 8%; position: absolute; top: 0px; left: 0px; }
+            .topBarBg img { width: 100%; height: 100%; }
+        .barBg { width: 100%; height: 10%; position: absolute; bottom: 0px; left: 0px; }
+            .barBg img { width: 100%; height: 100%; }
+        body { font-family: 'Microsoft YaHei'; }
+    </style>
+</head>
+<body>
+    <!--<section id="index_page" data-role="page" style="overflow: hidden">
+        <header data-role="header" style="display: none">
+            <h1>主页</h1>
+        </header>
+        <div data-role="content" style="width: 100%; overflow: auto; padding: 0px">
+            <img src="Content/img/map3.jpg" />
+        </div>
+    </section>-->
+
+    <section id="game_page" data-role="page" style="overflow: hidden">
+        <header data-role="header" style="display: none">
+            <h1>主页</h1>
+        </header>
+        <div data-role="content" style="width: 100%; overflow: auto; padding: 0px">
+            <div id="canvas">loading...</div>
+        </div>
+        <div class="borad">
+            <div class="topBarBg">
+                <img src="Content/img/Background/topBar_bg.png" />
+            </div>
+            <div class="barBg">
+                <img src="Content/img/Background/bar_bg.png" />
+            </div>
+        </div>
+    </section>
+</body>
+<script src="jquery-1.8.2.min.js"></script>
+<script src="jquery.mobile-1.4.2.min.js"></script>
+<script src="lufylegend-1.8.6.min.js"></script>
+<script src="lufylegend.ui-0.4.0.min.js"></script>
+<script src="interFace.js"></script>
+<script src="area.js"></script>
+<script src="jewels.js"></script>
+<script src="tool.js"></script>
+<script src="diamond.js"></script>
+</html>

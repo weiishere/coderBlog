@@ -1,0 +1,12 @@
+﻿.body {font-size:12px;}
+.outWrap { width:980px;margin:0 auto;border:solid 0px #999}
+.footer { width:980px;margin:0 auto;text-align:center}
+
+.adv { width:100%;position:absolute;left:0px;top:100px;height:100%}
+
+.header { width:100%;margin:15px auto}
+.nav { float:left;display:inline;margin-left:50px;width:600px}
+    .nav li { display:inline-block;}
+        .nav li:hover {background:#f2f2f2 }
+
+.sliderMenu { float:left;width:100%}

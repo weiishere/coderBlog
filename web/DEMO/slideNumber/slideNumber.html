@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>可视化值域滑块</title>
+    <style>
+        body { font-size:12px}
+        .clearfix:after{ content:"."; display:block; height:0px; clear:both; visibility:hidden;}
+        #slideLineWrap { width:auto;height:auto;border:solid 1px #999;margin:80px auto;display:inline-block;position:relative}
+        .slideBlock { position:absolute;width:10px;height:22px;background:#000;top:0px;left:0px;cursor:col-resize}
+            #slideLineWrap i { float:left;margin:0 10px;line-height:20px}
+            /*#slideLineWrap input { float:right}*/
+        #slideLine {width:800px;height:10px;background:red;float:left;margin:6px auto}
+        #resultWrap div{border:solid 1px #ccc;margin:5px;padding:3px;}
+        .topNum { position:absolute;top:-30px;left:-35px;background:#ccc;color:#333;height:25px;line-height:25px;border:solid 1px #666;text-align:center;width:80px;cursor:text}
+            .topNum_input { width:60px;text-align:center}
+    </style>
+</head>
+<body>
+    <div>
+        max:<input id="input_maxNumber" type="text"  value="1000000" /><input type="button" onclick="init()" value="重新生成" />
+    </div>
+    <div id="slideLineWrap" class="clearfix">
+        <i>0</i>
+        <div id="slideLine"></div>
+        <i>100000</i>
+    </div>
+    
+    <div id="resultWrap">
+        <!--<div>from:1000 to 2000 <label><input type="checkbox" />是否显示详细</label></div>-->
+    </div>
+</body>
+<script src="../jquery/jquery-1.8.2.min.js"></script>
+<script src="../backbone/underscore.js"></script>
+<script src="../backbone/backbone.js"></script>
+<script src="script_mvc.js"></script>
+</html>

@@ -1,0 +1,15 @@
+#navbar {
+  width: 80%;
+  height: 23px; }
+  #navbar ul {
+    list-style-type: none; }
+  #navbar li {
+    float: left; }
+    #navbar li a {
+      font-weight: bold; }
+  #navbar span a {
+    float: left;
+    display: block;
+    width: auto; }
+
+/*# sourceMappingURL=Scss1.css.map */

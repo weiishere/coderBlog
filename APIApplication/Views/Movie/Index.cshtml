@@ -1,0 +1,85 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+    <link href="~/Content/themes/style.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+</head>
+<body>
+    <section data-role="page" id="index">
+        <header data-role="header">
+            <a href="#options" data-icon="gear">Options</a>
+            <h1>电影推荐</h1>
+            <a href="#Search" data-icon="search" data-theme="b" data-transition="flip">Search</a>
+        </header>
+        <section data-role="content" id="index_content">
+            <h2>TOP250</h2>
+            <ul id="movieListWrap">
+            </ul>
+        </section>
+
+        <script type="text/template" id="item-template">
+            <li>
+                <img style="-webkit-user-select: none" src="<%-images.large%>" />
+                <h4><%-title%></h3>
+                <span><%-rating.average%></span>
+            </li>
+        </script>
+        <script src="~/Scripts/Movie/Index.js"></script>
+        <script src="~/Scripts/underscore.js"></script>
+        <script type="text/javascript">
+            var localHandler = function (data) {
+                //alert('我是本地函数，可以被跨域的remote.js文件调用，远程js带来的数据是：' + data.result.subjects.length);
+                var listRow = "";
+                $.each(data.result.subjects, function (i, item) {
+                    if (i == 1) {
+                        //$("#index_content").css("background-image", "url('" + item.images.large + "')");
+                        var img = new Image();
+                        img.src = item.images.large;
+                        img.onload = function () {
+                            alert("vvv");
+                        }
+                        img.onerror = function (e) {
+                            alert(e);
+                        }
+                    }
+                    var template = _.template($("#item-template").html());
+                    listRow += template(item);
+                });
+                $("#movieListWrap").append(listRow);
+            };
+        </script>
+        <script src="~/Scripts/tempData.js"></script>
+    </section>
+    <!--搜索页面-->
+    <section data-role="dialog" id="options">
+        <header data-role="header" data-theme="b">
+            <h1>应用设置</h1>
+        </header>
+        <div data-role="controlgroup">
+            <a href="index.html" data-role="button">网络设置</a>
+            <a href="index.html" data-role="button">缓存设置</a>
+            <a href="index.html" data-role="button">用户设置</a>
+        </div>
+
+        <a href="#" data-role="button" data-theme="b" data-rel="back">返回</a>
+    </section>
+    <div data-role="page" id="Search" data-add-back-btn="true">
+        <div data-role="header">
+            <h1>电影搜索</h1>
+        </div>
+        <div data-role="content">
+            <p>Search</p>
+        </div>
+    </div>
+
+</body>
+</html>

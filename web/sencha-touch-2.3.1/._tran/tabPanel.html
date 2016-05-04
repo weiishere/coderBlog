@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>TabPanel</title>
+    <link href="../resources/css/sencha-touch.css" rel="stylesheet" />
+    <script src="../sencha-touch-debug.js"></script>
+    <script>
+        Ext.require("Ext.TabPanel");
+        Ext.application({
+            icon: '168.png',
+            glossOnIcon: false,
+            tabletStartupScreen: '168.png',
+            phoneStartupScreen: '168.png',
+            launch: function () {
+                var myPanel=Ext.create("Ext.TabPanel", {
+                    fullscreen: true,
+                    tabBarPosition: 'bottom',
+                    layout:{
+                        animation:{type:'pop',direction:'right',duration:1000},
+                    },
+                    defaults: {
+                        styleHtmlContent: true
+                    },
+                    items: [
+                        {
+                            title: 'Home',
+                            iconCls: 'home',
+                            html: 'Home Screen',
+                            style:'background-color:#305500'
+                        },
+                        {
+                            title: 'Contact',
+                            iconCls: 'user',
+                            html: 'Contact Screen',
+                            style: 'background-color:#005299'
+                        }
+                    ]
+                });
+                myPanel.setActiveItem(1);
+            }
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

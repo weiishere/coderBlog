@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web", "web\web.csproj", "{6D8DB982-C91D-496E-AB37-946D6953B146}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "quanyou", "quanyou\quanyou.csproj", "{CC8BA5D2-2E7C-4198-884D-E474F6F0ACC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_WEIXIN", "APIApplication\API_WEIXIN.csproj", "{5F56B1FA-DCE9-4247-BBE1-1DDBEFD366CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewelGame", "jewelGame\JewelGame.csproj", "{DD18A438-725F-49DD-B436-103AFE82094A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D8DB982-C91D-496E-AB37-946D6953B146}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D8DB982-C91D-496E-AB37-946D6953B146}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D8DB982-C91D-496E-AB37-946D6953B146}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D8DB982-C91D-496E-AB37-946D6953B146}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC8BA5D2-2E7C-4198-884D-E474F6F0ACC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC8BA5D2-2E7C-4198-884D-E474F6F0ACC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC8BA5D2-2E7C-4198-884D-E474F6F0ACC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC8BA5D2-2E7C-4198-884D-E474F6F0ACC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F56B1FA-DCE9-4247-BBE1-1DDBEFD366CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F56B1FA-DCE9-4247-BBE1-1DDBEFD366CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F56B1FA-DCE9-4247-BBE1-1DDBEFD366CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F56B1FA-DCE9-4247-BBE1-1DDBEFD366CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD18A438-725F-49DD-B436-103AFE82094A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD18A438-725F-49DD-B436-103AFE82094A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD18A438-725F-49DD-B436-103AFE82094A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD18A438-725F-49DD-B436-103AFE82094A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://zhangktest.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = web\\web.csproj
+		SccProjectName1 = web
+		SccLocalPath1 = web
+		SccProjectUniqueName2 = quanyou\\quanyou.csproj
+		SccProjectName2 = quanyou
+		SccLocalPath2 = quanyou
+		SccProjectUniqueName3 = APIApplication\\API_WEIXIN.csproj
+		SccProjectName3 = APIApplication
+		SccLocalPath3 = APIApplication
+		SccProjectUniqueName4 = jewelGame\\JewelGame.csproj
+		SccProjectName4 = jewelGame
+		SccLocalPath4 = jewelGame
+	EndGlobalSection
+EndGlobal

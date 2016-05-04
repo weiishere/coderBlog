@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage/GlobleMasterPage.Master" AutoEventWireup="true" CodeBehind="UserProfile.master.cs" Inherits="web.MasterPage.UserProfile" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="../Style/themes/default/profile.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="subMenuPlace" runat="server">
+    <div class="profile_MenuOutWrap clearfix">
+        <nav>
+            <ul>
+                <li><a href="../Profiles">我的首页</a></li>
+                <li><a href="../ProfilesArticle">我的博文</a></li>
+                <li><a href="#">我的栏目</a></li>
+                <li><a href="#">留言板</a></li>
+                <li><a href="#">图片相册</a></li>
+                <li><a href="#">签名档</a></li>
+                <li><a href="#">我的小组</a></li>
+                <li><a href="#">个性化设置</a></li>
+            </ul>
+        </nav>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlace" runat="server">
+    <div class="profileBodyWrap">
+        <aside class="profile_sideBar">
+            <header>
+                <h1>黄晓伟</h1>
+                <figure>
+                    <img src="../Images/tyty0.jpg" />
+                    <figcaption>是狼就炼好牙，是羊就炼好腿。</figcaption>
+                </figure>
+            </header>
+            <section>
+                <h1>统计信息</h1>
+                <nav>
+                    <span><mark>最近动态</mark>：71</span>
+                    <span><mark>栏目</mark>：10</span>
+                    <span><mark>博文</mark>：255</span>
+                    <span><mark>照片/相册</mark>：152/6</span>
+                    <span><mark>小组</mark>：3</span>
+                    <span><mark>登录次数</mark>：512</span>
+                    <span><mark>上次登录</mark>：2012-9-28 14:12</span>
+                    <span><mark>级别</mark>：管理员</span>
+                </nav>
+            </section>
+            <section>
+                <h1>时间轴</h1>
+                <nav class="timeBarWrap">
+                    <div>2012</div>
+                    <div>2011</div>
+                    <div>2010</div>
+                </nav>
+            </section>
+            <section>
+                <h1>搜索</h1>
+                <div class="m10">
+                    <input type="text" class="textStyle2" />
+                </div>
+            </section>
+        </aside>
+        <div class="profile_contentWrap">
+            <asp:ContentPlaceHolder ID="ContentPlace" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="ScriptPlace" runat="server">
+    <script src="../Javascript/jquery-ui-1.8.23.custom.min.js"></script>
+    <script src="../Javascript/page/profile.js"></script>
+    <asp:ContentPlaceHolder ID="ScriptPlace" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

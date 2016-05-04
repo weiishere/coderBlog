@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>PDF代码示例</title>
+</head>
+<body>
+    <input type="button" id="btu_add" value="增加" />
+    <ul id="messageList">
+
+    </ul>
+</body>
+    <script src="jquery.js"></script>
+    <script src="underscore.js"></script>
+    <script src="backbone.js"></script>
+    <script src="backbone-localstorage.js"></script>
+    <script>
+        (function ($) {
+            var Message = Backbone.Model.extend({
+                //创建一个Message对象，拥有对象
+                name:null
+            });
+            var Messages = Backbone.Collection.extend({
+                initialize: function (model, opation) {
+                    this.bind("add", opation.view.addOneMessage)//为何这里要加一个view，这个要搞明白
+                }
+            });
+            var AppView = Backbone.View.extend({
+                el: $("body"),
+                initialize: function () {
+                    //构造函数，实例化一个Message集合类，并且以字典方式传入Appview的对象
+                    this.messages = new Messages(null, { view: this });
+                },
+                events: {
+                    "click #btu_add": "checkIn"
+                },
+                checkIn: function () {
+                    var _name = window.prompt("您好，请问你是哪里人？");
+                    if (_name == "") _name = "无名氏";
+                    var message = new Message({ name: _name });
+                    this.messages.add(message);
+                },
+                addOneMessage: function (model) {
+                    $("#messageList").append("<li>这里是来自" +  model.get('name') + "星球的问候：   hello world！</li>");
+                }
+            });
+            var appView = new AppView();
+        })(jQuery);
+    </script>
+</html>

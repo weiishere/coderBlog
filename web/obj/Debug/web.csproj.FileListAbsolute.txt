@@ -1,0 +1,6 @@
+E:\Code\webTest\coderBlog\web\bin\web.dll.config
+E:\Code\webTest\coderBlog\web\bin\web.dll
+E:\Code\webTest\coderBlog\web\bin\web.pdb
+E:\Code\webTest\coderBlog\web\obj\Debug\web.csprojResolveAssemblyReference.cache
+E:\Code\webTest\coderBlog\web\obj\Debug\web.dll
+E:\Code\webTest\coderBlog\web\obj\Debug\web.pdb

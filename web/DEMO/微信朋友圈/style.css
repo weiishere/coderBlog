@@ -1,0 +1,72 @@
+﻿html { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; font-size: 62.5%; height: 100%; }
+body { font-family: helvetica, sans-serif; font-size: 1.4rem; margin: 0; line-height: 20px; color: #000; background-color: #fff; height: 100%; overflow-x: hidden; height: 100%;text-size-adjust: none }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+a { background: transparent; text-decoration: none; color: #000; color:#0c61a0}
+    a:active { outline: 0; }
+b, strong { font-weight: bold; }
+dfn { font-style: normal; }
+img { border: 0; vertical-align: middle; }
+* { word-break: break-all; word-wrap: break-word; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-tap-highlight-color: transparent; /* For some Androids */ outline: none; }
+input, button, select, textarea { outline: none; }
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    input[type="text"], input[type="password"],
+    select,
+    button { -webkit-appearance: none; }
+input, textarea, button { border: 0; margin: 0; padding: 0; font-family: "微软雅黑", "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif; }
+textarea { resize: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+td, th { padding: 0; }
+h1, h2, h3, h4, h5, h6, p, figure, form, blockquote { margin: 0; }
+ul, ol, li, dl, dd { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+input::-moz-placeholder, textarea::-moz-placeholder { color: #ccc; }
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #ccc; }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #ccc; }
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix { display: inline-block; }
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */
+
+/*Reset End*/
+
+.container { width: 100%; height: 100%; -webkit-box-sizing: border-box; position: relative; background: #fff; }
+/*.container {background-color: cyan; width: 100%; }*/
+
+
+.header { width: 100%; height: 200px; background: #ccc; position: relative; background:url("http://www.join-group.com/attachment/1309/723bd26742.jpg");background-size:100% 100%;}
+    .header img { position: absolute; right: 1em; bottom: 0; width: 5em; height: 5em; bottom: -1.5em; border:solid 2px #fff}
+    .header h1 { position: absolute; bottom: 0.5px; font-size: 22px; width:70%;text-align:right;color: #fff; text-shadow: 1px 1px 0px #000;line-height:30px }
+
+.content_body { width: 100%; height: auto; margin-top: 4em; color: #333; }
+    .content_body > ul { width: 100%; font-size: 14px;  }
+        .content_body > ul > li {width: 100%; font-weight: bold; border-bottom: solid 1px #ccc;padding-bottom:1em;margin-bottom:1em}
+        .content_body ul li section { width: 95%; margin: 0 auto; }
+    .content_body section img { float: left; width: 15%; }
+    .content_body article { border: solid 0px #000; float: left; width: 82%; min-height: 5em; margin-left: 3%; box-sizing: border-box; }
+        .content_body article h2 { text-align: left; font-size: 16px; }
+        .content_body article > div { margin-top: 5px; line-height: 1.3em; }
+        .content_body article footer { margin-top: 0.5em; color: #999; font-size: 12px; font-weight: normal; position: relative; height: 2.2em; }
+            .content_body article footer div { width: 50%; height: 2.5em; background: #333; position: absolute; right: 3.5em; top: -20%; border-radius: 0.5em; overflow: hidden;z-index:100; display: none;  }
+            .content_body article footer > input { float: right; width: 3em; height: 2em; border: solid 1px #666; border-radius: 0.5em; }
+                .content_body article footer > input:hover { background:#999}
+                .content_body article footer div > input { float: left; width: 49%; background: transparent; height: 80%; margin-top: 0.2em; text-align: center; color: #fff; border-radius:0}
+                    .content_body article footer div > input:first-child { border-right: solid 1px #000; }
+                    .content_body article footer div > input:last-child { border-left: solid 1px #666; }
+
+.commonWrap { width: 100%; padding: 0.5em 0 0.5em 0; background: #eee; border-radius: 0.3em; position: relative; }
+    .commonWrap:before { content: ""; position: absolute; border: solid 8px transparent; border-bottom-color: #eee; top: -15px; left: 1em; }
+    .commonWrap ul { width: 100%; }
+        .commonWrap ul li { width: 96%; margin: 0 auto; font-weight: normal; }
+    .commonWrap li h3 { float: left; }
+    .commonWrap input[type='text'] { width:70%;border:solid 1px #999;margin-left:2%;height:30px;border-radius:0.5em;padding-left:0.5em;margin-top:0.5em}
+    .commonWrap input[type='button'] { width:20%;margin-left:0.5em;height:32px;border:solid 1px #999;border-radius:0.5em;padding:0.1em;margin-top:0.4em}
+.likeWrap {width:95%;margin:0 auto;font-size:12px;}
+    .likeWrap i { float:left;width:1.5em;height:1.5em;background:url("http://ico.ooopic.com/iconset01/exclusive-reflection-icons/gif/120517.gif") no-repeat;background-size:100% 100%}
+    .likeWrap a { margin-left:0.3em}
+        .likeWrap a:after { content:"、"}
+        .likeWrap a:last-child:after { content: ""; }

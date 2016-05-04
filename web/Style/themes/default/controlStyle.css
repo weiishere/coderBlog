@@ -1,0 +1,10 @@
+﻿/*按钮样式*/
+.buttonStyle_clear { padding:0px; border:0px }
+
+.textStyle1 { border:solid 1px #ccc; padding:0px; height:18px; border-radius:4px;background:#EFEFF2;
+              -webkit-transition:all 0.3s ease-out;-moz-transition:all 0.3s ease-out; -o-transition:all 0.3s ease-out;-ms-transition:all 0.3s ease-out; transition:all 0.3s ease-out;}
+    .textStyle1:focus {background:#fff; width:400px}
+
+.textStyle2 { border:solid 1px #ccc; padding:0px; height:18px; border-radius:4px;background:#EFEFF2;
+              -webkit-transition:all 0.3s ease-out;-moz-transition:all 0.3s ease-out; -o-transition:all 0.3s ease-out;-ms-transition:all 0.3s ease-out; transition:all 0.3s ease-out;}
+    .textStyle2:focus {background:#fff; width:200px}

@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="GlobleMasterPage.master.cs" Inherits="web.MasterPage.GlobleMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <link href="../Style/base.css" rel="stylesheet" />
+    <link href="../Style/globleStyle/mainLayout.css" rel="stylesheet" />
+    <link href="../Style/themes/default/mainStyle.css" rel="stylesheet" />
+    <link href="../Style/themes/default/controlStyle.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <title>You.coder.blog</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="mainWrap" class="mainWrap">
+            <header id="blogHead" class="blogHead">
+                <div class="headTopWrap">
+                    <a href="../SystemPage/Default.aspx"><img src="../Images/logo.png" /></a>
+                    <h1><asp:Literal runat="server" ID="topDeclaration" Text="小成就，大梦想" /></h1><h2>www.youcoder.com</h2>
+                    <div class="headUserArea">
+                        <div class="tr">
+                            <a href="#" title="登录" class="headLogon"></a>
+                            <a href="#" title="注册" class="headReg"></a>
+                            <a href="#" title="设置" class="headSet"></a>
+                            <a href="#" title="关于" class="headHelp"></a>
+                        </div>
+                        <div class="searchBar">
+                            <input type="text" id="headSearch" weakChar='true' value="search here" />
+                        </div>
+                    </div>
+                </div>
+                <asp:Panel runat="server" ID="mainBlogMenu">
+                    <nav class="blogMainNav" id="blogMainNav">
+                        <ul>
+                            <li><a href="../Index">社区</a></li>
+                            <li><a href="../Profiles">我的主页</a></li>
+                            <li><a href="../Articles">博文</a></li>
+                            <li hover="true" order="hot"><a href="#">热门栏目&nbsp;<img class="vm" src="../Images/Down.png" /></a></li>
+                            <li hover="true" order="mine"><a href="#">热门标签&nbsp;<img class="vm" src="../Images/Down.png" /></a></li>
+                            <li><a href="#">扎堆</a></li>
+                            <li><a href="#">便签墙</a></li>
+                            <li><a href="#">我问你答</a></li>
+                        </ul>
+                    </nav>
+                    <div class="subModleListWrap">
+                        <nav class="subModleList dhidden" id="subModleList">
+                            <ul>
+                                <li>asp.net</li><li>ajax</li><li>javascript</li><li>程序人生</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </asp:Panel>
+                <asp:ContentPlaceHolder ID="subMenuPlace" runat="server">
+                </asp:ContentPlaceHolder>
+            </header>
+            <!--面包屑-->
+            <div class="siteMapWrap">
+                <ul>
+                    <li><a href="#">首页</a><div><span></span></div></li>
+                    <li><a href="#">博文列表</a><div><span></span></div></li>
+                    <li>关于jquery的调试技巧<div><span></span></div></li>
+                </ul>
+            </div>
+            <!--主内容区域-->
+            <asp:ContentPlaceHolder ID="ContentPlace" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        
+        <script src="../Javascript/jquery-1.8.2.min.js"></script>
+        <script src="../Javascript/base/Global.js"></script>
+        <script src="../Javascript/base/jqueryExtend.js"></script>
+        <script src="../Javascript/common/artDialog/jquery.artDialog.js?skin=gray"></script>
+        <script src="../Javascript/common/artDialog/artDialog.iframeTools.js"></script>
+        <script src="../Javascript/page/master1.js"></script>
+        
+        <asp:ContentPlaceHolder ID="ScriptPlace" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

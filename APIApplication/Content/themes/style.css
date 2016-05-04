@@ -1,0 +1,7 @@
+﻿body { font-family:'Microsoft YaHei';}
+
+#index_content { padding-top:200px;background-repeat:repeat-x}
+#movieListWrap { width:100%;display:inline-block;padding:10px 0 0 0;background:#fff}
+    #movieListWrap li { width:32%;display:inline-block;text-align:center;margin-bottom:10px;}
+        #movieListWrap li h3 { line-height:30px;margin:0px}
+        #movieListWrap li img { width:90%;}

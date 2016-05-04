@@ -1,0 +1,42 @@
+﻿body { font-size: .85em; font-family:'Microsoft YaHei', "Segoe UI", Verdana, Helvetica, Sans-Serif; color: #232323; background-color: #fff; }
+header, footer, nav, section { display: block; }
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset { border: 1px solid #ddd; padding: 0 1.4em 1.4em 1.4em; margin: 0 0 1.5em 0; }
+legend { font-size: 1.2em; font-weight: bold; }
+textarea { min-height: 75px; }
+.editor-label { margin: 1em 0 0 0; }
+.editor-field { margin: 0.5em 0 0 0; }
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error { color: #f00; }
+.field-validation-valid { display: none; }
+.input-validation-error { border: 1px solid #f00; background-color: #fee; }
+.validation-summary-errors { font-weight: bold; color: #f00; }
+.validation-summary-valid { display: none; }
+
+/* Styles for Normal
+-----------------------------------------------------------*/
+.headWrap { width:100%;height:70px;background:#4fa7f7 url("../images/121302palmtrees.jpg") no-repeat right}
+    .headWrap h1 { width:1030px;display:block;margin:0 auto;font-size:22px;color:#fff;line-height:70px;}
+.ContentWrap { width: 1030px;margin:0 auto}
+.transition { }
+.sideBar { float:left;width:130px;height:600px;overflow:hidden}
+    .sideBar ul { float:right;width:130px;border-right:solid 1px #acd8f8;}
+        .sideBar ul li { float:right;border:solid 1px #acd8f8;margin:10px -1px 0px auto;height:40px;width:110px;cursor:pointer;
+                         text-align:center;line-height:40px;font-size:14px;border-radius:8px 0 0 8px;
+                         transition: all 0.1s ease;background:#a9d8f0;box-shadow:inset 0px 0px 2px #fff}
+            .sideBar ul li:hover {border:solid 1px #39b4f3;background:#fff;color:#000;font-weight:bold;box-shadow:0 0 1px #39b4f3}
+#sideBar_active { border:solid 1px #39b4f3;border-right:solid 1px #fff;box-shadow:0 0 1px #39b4f3;background:#fff;font-weight:bold;box-shadow:1px 1px 3px #999}
+.contentWrap { float:left;width:890px;margin:10px 0 0 10px;border:solid 1px #39b4f3;box-sizing:border-box;height:550px;
+               overflow-x:hidden;border-radius:7px 7px 0 0}
+    .contentWrap h2 {float:left;width:100%;height:30px;background:#39b4f3;color:#fff;line-height:30px;text-indent:1em;border-top:solid 1px #dfedfb}
+
+.TableListWrap { border: solid 1px #ccc; line-height: 25px; width: 945px; padding: 5px; }
+.TableList { width: 878px; border: solid 1px #f8df96;text-align:center;margin:5px;float:left;}
+    .TableList thead th {background:#fff6d9;height:35px;text-align:center;font-weight:bold;font-size:14px}
+    .TableList td, TableList th { border-top:solid 1px #f8df96;height:30px;}
+    .TableList tr { transition: all 0.1s linear; }
+        .TableList tr:nth-child(2n+1) { background:#fcf9f0}
+    .TableList tr:hover { background: #faf3dc; }
